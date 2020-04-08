@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>We Can WebSocket!</title>
+</head>
+<body>
+    <h1>We CAN WebSocket!</h1>
+
+    <form class="connect">
+        Enter a username: 
+        <input name="name" type="text" maxlength="10" placeholder="Your name">
+        <button type="submit">Connect</button>
+    </form>
+    <section 
+        id="chatbox"
+        style="border: solid black 1px; height: 400px; width:100%; overflow: scroll;"
+    >
+    </section>
+    <form class="send">
+        Chat:
+        <input
+            id="chat"
+            type="text"
+            name="chat"
+            size="80"
+            maxlength="100"
+            placeholder="Chat with us!"
+            autocomplete="off"
+        />
+        <button type="submit">Send</button>
+    </form>
+
+    <button class="leave">Leave</button>
+    
+    <script src="main.js"></script>
+</body>
+</html>
