@@ -1,4 +1,4 @@
-const webSocketURL = "ws://our-first-websocket.herokuapp.com"
+const webSocketURL = "wss://our-first-websocket.herokuapp.com"
 
 const connectForm = document.querySelector(".connect");
 const sendForm = document.querySelector(".send");
