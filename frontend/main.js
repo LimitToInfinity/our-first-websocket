@@ -16,7 +16,6 @@ const createWebSocket = () => {
 }
 
 function waitForReadyState(resolve, newWebSocket) {
-    console.log("wait");
     if (newWebSocket.readyState === 1) { return resolve(newWebSocket); }
     else { setTimeout(() => waitForReadyState(resolve, newWebSocket), 40); }
 }
