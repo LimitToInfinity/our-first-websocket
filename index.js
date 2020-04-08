@@ -1,13 +1,16 @@
 const express = require("express");
-const app = express();
+const WebSocketServer = require("websocket").server;
 
+const app = express();
 const port = 9000 || process.env.PORT;
 const httpServer = app.listen(port, () => console.log(`Listening on port ${port}`));
 
-const WebSocketServer = require("websocket").server;
-const websocket = new WebSocketServer({ httpServer });
-
-websocket.on("request", handleRequest);
+app.get("/", (request, response) => {
+    const websocket = new WebSocketServer({ httpServer });
+    websocket.on("request", handleRequest);
+    
+    response.send("This is running!");
+})
 
 function handleRequest(request) {
     const connection = request.accept(null, request.origin);
