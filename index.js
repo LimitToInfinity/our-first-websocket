@@ -2,7 +2,7 @@ const express = require("express");
 const WebSocketServer = require("websocket").server;
 
 const app = express();
-const port = 9000 || process.env.PORT;
+const port = process.env.PORT || 9000;
 const httpServer = app.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get("/", (request, response) => {
